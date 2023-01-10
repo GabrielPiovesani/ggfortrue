@@ -160,8 +160,100 @@ html,body {
         display: flex;
         justify-content: space-between;
         background-color: #060606;
-
-    }
-    footer {
         position: relative;
         bottom: 0;
+
+    }
+       
+@media only screen and (max-width: 600px) {
+
+    html,body {
+        justify-content: center;
+        max-height: 100%;
+        
+    }
+
+  
+    header {
+        max-width: 320px;
+        max-height: 100px;
+
+    }  
+
+    .fotoquack{
+        max-width: 320px;
+        margin: 0px 10px 10px 0px; 
+        margin: 0;
+    }
+    .fotoquack img{
+        max-width: 94px;    
+    }
+
+    .corparagrafo {
+        max-width: 320px;
+        max-height: 20px;
+        font-size: 14px;
+        
+        
+    }
+
+    .menubar ul{
+        /* definindo espaço fixo entre o nome abaixo do banner e o corpo */
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        nav a{
+        /* tamanho fonte letras menu */
+            font-size: 12px;
+        }
+    main{
+        max-width: 320px;          
+        
+    }
+
+        .historiaQuack {   
+            max-width: 320px;     
+            margin-left: 5px;
+            margin-top: 20px;        
+        }
+        .historiaQuack img{        
+            height: 20px;
+        }
+   
+        .historiaQuack h1{        
+            font-size:20px;
+        }
+        main p{
+            font-size: 12px;
+            margin: 15px;
+        }
+         /* ------------------------------------------------------slide de fotos do corpo -------------------------------------------------*/
+    /* box onde fica a foto caso queira aumentar ou diminuir seu tamanho mecher neste campo biblioteca: https://www.youtube.com/watch?v=XXUEFueOsAs&t=14s*/
+    .slyde{
+        margin: auto;
+        margin-bottom: 10px;
+        width:318px;
+        height: 137px;
+    }
+
+    .fotos img{
+        height: 140px;
+        margin: 0px 10px 10px 0px;
+     
+    }
+    footer {
+        display: flex;
+        max-width: 320px; 
+        max-height: 20px;
+        font-size: 6px;
+        align-items: center;
+
+
+    }
+    footer img{
+        max-width: 100px;
+        max-height: 18px;
+
+    }
+   
+}
