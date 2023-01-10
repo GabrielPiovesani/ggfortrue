@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/*-----------------trecho abaixo garante design responsivo, para que seja eliminados padrões gerais de alguns navegadores ----------*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    bottom: 0;
+}
+/*-----------------responsividade minima de tela, de acordo com orientação da aula de monitoria, está ação tem como intuito-----------
+garantir que nossas informações ocupem toda tela independente de seu formato---------------------------------------------------------*/
+html,body {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+/*------------------Ajuste de banner tela home--------------------------------------------------------------------------------------*/
+.fotoquack{
+    /* escolha de utilização de dysplay: flex com o intuito de manipularmos os elementos filhos */
+    display: flex;
+     /*definição cor do fundo do banner  */
+    background: linear-gradient(#f3f2f4,#f8f9fa,#060606);
+    /*ajuste dos elementos dos display ao meio*/
+    justify-content: center;
+}  
+/*------------------Nome da empresa abaixo do banner-------------------------------------------------------------------------------- */
+.corparagrafo {
+    /* deixa o corpo do elemento trasnparente para permitir sua coloração, de fundo criada apareça dentro do item- CONFIRMAR SE ESTE É O CONSEITO COM A CARLA */
+    -webkit-background-clip: text;
+    /* preenchimento do fundo das letras */
+    background-image: linear-gradient(to bottom, #FCe930, #FC9600, #FCE93C);
+    /* especifica que quero que o preenchimento do elemento fique transparente permitindo que as especificações a cima funcione a cima funcione */
+    -webkit-text-fill-color: transparent;
+    /* alinhamento dentro do display */
+    text-align: center;
+}
+.leg{
+    /* preenchimento fundo do display */
+    background-color: #060606;
+    /* fonte */
+    font-family: 'VT323', monospace;
+    /* tamanho fonte */
+    font-size: 75px;
+}
+/*------------------------------menu bar------------------------------------------------------------------------------------------- */
+.menubar ul{
+    /* escolha de utilização de display: flex com o intuito de manipularmos os elementos filhos */
+        display: flex;
+     /* destribui os elementos filhos de forma igualitaria dentro do display */
+        justify-content: space-around;
+    /* preenchimento do display */
+        background-color: black;
+    /* definindo espaço fixo entre o nome abaixo do banner e o corpo */
+        margin-top: 5px;
+        margin-bottom: 1px;
+        padding: 0px 5px 10px 5px ;
+    }
+    nav a{
+    /* fonte menu */
+        font-family: 'VT323', monospace;
+    /* cor letras menu */
+        color: #FCE93C;
+    /* tamanho fonte letras menu */
+        font-size: 30px;
+    }
+ 
+/*----------------------------------Corpo/main---------------------------------------------------------------------------------------*/
+    /* titulo principal */
+    .historiaQuack {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        margin-top: 30px;        
+    }
+    .historiaQuack img{        
+        height: 70px;
+    }
+   
+    .historiaQuack h1{
+    /* deixa o corpo do elemento trasnparente para permitir sua coloração, de fundo criada apareça dentro do item- CONFIRMAR SE ESTE É O CONSEITO COM A CARLA */
+    -webkit-background-clip: text;
+    /* preenchimento do fundo das letras */
+    background-image: linear-gradient(to bottom, #080808, #464443, #080808);
+    /* especifica que quero que o preenchimento do elemento fique transparente permitindo que as especificações a cima funcione a cima funcione */
+    -webkit-text-fill-color: transparent;
+    /* alinhamento dentro do display */
+    text-align: center;
+    /* fonte */
+    font-family: 'VT323', monospace;
+    /* tamanho */
+    font-size:70px;
+    /* distancia entre menubar e corpo */
+    
+    }
+
+    .historiaQuack img{
+        font-size: 40px;
+    /* animação das fotos ao lado do h1 fonte- https://metring.com.br/animacao-infinita-em-css */
+      animation: rotate 3s infinite linear;
+    }
+    @keyframes rotate {
+        from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    main p{
+        font-family: 'VT323', monospace;
+        font-size: 30px;
+        text-align: center;
+        margin: 20px;
+    }
+    /* ------------------------------------------------------slide de fotos do corpo -------------------------------------------------*/
+    /* box onde fica a foto caso queira aumentar ou diminuir seu tamanho mecher neste campo biblioteca: https://www.youtube.com/watch?v=XXUEFueOsAs&t=14s*/
+    .slyde{
+        margin: auto;
+        margin-bottom: 10px;
+        width:640px;
+        height: 360px;
+        /* comando para que mostre apenas o que está dentro do box */
+        overflow: hidden;
+    }
+    /* espaço que as fotos ocupam */
+    .slyde .fotos{
+        /* o width precisa ser definido de acordo com a quantidade das fotos neste caso estou utilizando */
+        width: 500%;
+        animation-name: animacao;
+        animation-duration: 25s;
+        animation-iteration-count: infinite;
+    }
+    .slyde .fotos img {
+        width: 19.9%;
+    }
+    @keyframes animacao{
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;} 
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
+    }
+    .fotos img{
+        height: 340px;
+        margin: 0px 10px 10px 0px;
+     
+    }
+  
+    footer {
+        font-family: 'Fira Code', monospace;
+        color: #f3f2f4;
+        display: flex;
+        justify-content: space-between;
+        background-color: #060606;
+
+    }
+    footer {
+        position: relative;
+        bottom: 0;
