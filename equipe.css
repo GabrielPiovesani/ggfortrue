@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    
+}
+
+#container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(143, 143, 205);
+}
+
+#container h1 {
+    justify-content:center;
+    align-items:center;
+    
+
+}
+
+.menubar ul{
+    /* escolha de utilização de display: flex com o intuito de manipularmos os elementos filhos */
+        display: flex;
+     /* destribui os elementos filhos de forma igualitaria dentro do display */
+        justify-content: space-around;
+    /* preenchimento do display */
+        background-color: black;
+    /* definindo espaço fixo entre o nome abaixo do banner e o corpo */
+        margin-bottom: 1px;
+        padding: 0px 5px 10px 5px ;
+    }
+    nav a{
+    /* fonte menu */
+        font-family: 'VT323', monospace;
+    /* cor letras menu */
+        color: #FCE93C;
+    /* tamanho fonte letras menu */
+        font-size: 30px;
+    }
+
+.fotop {
+    margin-right: 20px;
+    height: 200px;
+    width: 160px;
+    border-radius: 50%;
+    
+    
+}
+
+
+.texto {
+    
+    font-size: 16px;
+    
+}
+
+.texto p{
+
+    width: 150px;
+    justify-content: center;
+    text-align:justify;
+    align-items:center;
+    
+
+}
+
+#rodape {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+
