@@ -9,6 +9,7 @@
 
 body{
     background: #f3f2f4;
+    font-family: 'VT323', monospace;
 }
 
 .menuBar ul{
@@ -41,7 +42,7 @@ h1{
 
 .containerTexto{
     width: 100%;
-    height: 250px;
+    height: 400px;
     display: flex;
     justify-content:center;
 }
@@ -54,3 +55,80 @@ h1{
     padding: 10px;
     width: 600px;
 }
+
+/* container do formulario */
+#formulario{
+    display: flex;
+    justify-content: center;
+    background: #181920;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fafafa;
+    margin: 50px;
+    background: #242632;
+    width: 400px;
+    height: 500px;
+    border: solid 1px #FCE93C;
+    border-radius: 20px;
+}
+
+#formulario > form > h2{ 
+    text-align: start; 
+    margin: 10px;
+}
+
+fieldset{
+    margin: 20px;
+    border: none;
+    
+}
+
+span{
+    padding: 3px;
+    display: block;
+}
+
+label{
+    height: 20px;
+    padding: 3px;
+}
+
+.input{
+    width: 300px;
+    height: 23px;
+    border-radius: 5px;
+    border: 1px solid #FCE93C;
+    text-indent: 2px;
+    padding: 2px;
+}
+
+#boxAssunto{
+    
+}
+#emailTexto{
+    padding: 5px;
+    height: 220px;
+}
+textarea{
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid rgb(35, 35, 108);
+    color: #fafafa;
+}
+
+#botao-enviar{
+    height: 30px;
+    border: solid 1px white;
+    box-shadow: #f3f2f4;
+    border-radius: 2px;
+    width: 50px;
+    align-self: center;
+    color: #fafafa;
+    background: #000; 
+}
+
+
