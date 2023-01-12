@@ -9,6 +9,10 @@
 </head>
 <body>
     <header>
+        <div class="leg">
+            <p class="corparagrafo">Quack Games</p>
+        </div>  
+         <!--parte do menu do site  -->
         <nav class="menuBar">
             <ul>
                 <a href="./index.html">Quem somos</a>
@@ -29,42 +33,61 @@
         </div>
     </section>
     <section>
-        <div id="formulario">
+        <div id="containerFormulario">
             <form name="form">
                 <fieldset>
                         <h2>Entre em contato</h2>
                     <div class="boxInput">
                         <label>
-                            <span>Nome:</span>
-                            <input type="text" name="nome" placeholder="Nome e sobrenome" class="input necessario">
+                            <span class="spansTitles">Nome:</span>
+                            <input type="text" name="nome" 
+                            placeholder="Nome e sobrenome" 
+                            class="input entrada required" id="nome"
+                            oninput="verificarNome()">
+                            <span></span>
                         </label>
                     </div>
 
                     <div class="boxInput">
                         <label>
-                            <span>Email:</span>
-                            <input type="email" name="email" placeholder="E-mail" class="input necessario">
+                            <span class="spansTitles">Email:</span>
+                            <input type="email" 
+                            name="email" 
+                            placeholder="Entre com o email" 
+                            class="input entrada required"
+                            id="email"
+                            oninput="verificarEmail()">
+                            <span></span>
                         </label>
                     </div>
                     <div class="boxAssunto">
                         <label>
                             <span>Assunto:</span>
                             <select name="assunto" id="assunto">
-                                <option value="sujestaoDeMelhoria">Sujestão de melhoria</option>
+                                <option value="sujestaoDeMelhoria">Sugestão de melhoria</option>
                                 <option value="solicitaServico">Solicitação de serviço</option>
                                 <option value="outros">Outros</option>
                             </select>
+                            <span></span>   
                         </label>
                     </div>
                     <div id="emailTexto">
                         <label>
-                            <textarea name="" cols="40" rows="15" placeholder="Escreva aqui..." id="textArea">
+                            <textarea name=""
+                            cols="40"
+                            rows="15" 
+                            placeholder="Escreva aqui..." id="textArea">
                                 
                             </textarea>
                         </label>
                     </div>
 
-                    <input class="btn_submit" type="submit" id="botao-enviar" value="Enviar">
+                    <input class="btn_submit" 
+                    type="submit"
+                    id="botao-enviar"
+                    value="Enviar"
+                    class="input"
+                    onclick="enviarForm()">
                 </fieldset>
             </form>
         </div>
@@ -81,6 +104,6 @@
         Todos os direitos reservados ©
         <img id="fotorodape" src="./assets/img/roda.JPG"> 
     </footer>
-    <script src="/assets/js/contato.js"></script>
+    <script src="./assets/js/contato.js"></script>
 </body>
 </html>
