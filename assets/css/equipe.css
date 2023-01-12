@@ -55,7 +55,8 @@ html,body {
 
 
 /* parte dos links do site */
-nav a{
+    nav a{
+
     /* fonte menu */
         font-family: 'VT323', monospace;
     /* cor letras menu */
@@ -63,7 +64,6 @@ nav a{
     /* tamanho fonte letras menu */
         font-size: 30px;
     }
-
 
 
 /* meche com a tag h1 do site */
@@ -83,34 +83,25 @@ h1{
     font-size:70px;
     margin-bottom: 20px;
     
-}
-
-
 .container {
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
     align-self: center;
-    
-    
  }
    
 
 .fotop {
-   
-    
     height: 200px;
     width: 160px;
     border-radius: 50%;
     box-shadow: rgb(255, 255, 0) 2px 3px;
-   
-}
+  }
 
 .scale:hover {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
-  
-  }
+ }
 
   .scale{
     display: flex;
@@ -121,7 +112,6 @@ h1{
 
 
 .texto {
-    
     font-family: 'VT323', monospace;
     font-size: 30px;
     margin-top: 40px;
@@ -140,10 +130,6 @@ h1{
     justify-content: space-between;
     background-color: #060606;
     align-items: center;
-    
-    
-    
-
 }
 
 
@@ -186,11 +172,6 @@ h1{
             transform: scale(1.2);
           
           }
-
-
 }
-
-
-
 
 

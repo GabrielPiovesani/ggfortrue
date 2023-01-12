@@ -9,22 +9,52 @@
 
 body{
     background: #f3f2f4;
+    font-family: 'VT323', monospace;
 }
-
+/* inicio da formatação do menu  */
+.corparagrafo {
+    /* deixa o corpo do elemento trasnparente para permitir sua coloração, de fundo criada apareça dentro do item- CONFIRMAR SE ESTE É O CONSEITO COM A CARLA */
+    -webkit-background-clip: text;
+    /* preenchimento do fundo das letras */
+    background-image: linear-gradient(to bottom, #FCe930, #FC9600, #FCE93C);
+    /* especifica que quero que o preenchimento do elemento fique transparente permitindo que as especificações a cima funcione a cima funcione */
+    -webkit-text-fill-color: transparent;
+    /* alinhamento dentro do display */
+    text-align: center;
+}
+.leg{
+    /* preenchimento fundo do display */
+    background-color: #060606;
+    /* fonte */
+    font-family: 'VT323', monospace;
+    /* tamanho fonte */
+    font-size: 75px;
+}
+/*------------------------------menu bar------------------------------------------------------------------------------------------- */
 .menuBar ul{
+    /* escolha de utilização de display: flex com o intuito de manipularmos os elementos filhos */
         display: flex;
+     /* destribui os elementos filhos de forma igualitaria dentro do display */
         justify-content: space-around;
+    /* preenchimento do display */
         background-color: black;
+    /* definindo espaço fixo entre o nome abaixo do banner e o corpo */
+        margin-top: 5px;
         margin-bottom: 1px;
-        padding: 0px 5px 10px 5px ;
+        padding: 0px 5px 0px 5px;
     }
     nav a{
+    /* fonte menu */
         font-family: 'VT323', monospace;
+    /* cor letras menu */
         color: #FCE93C;
+    /* tamanho fonte letras menu */
         font-size: 30px;
         text-decoration: none;
     }
- 
+ /* fim da formatação do menu */
+
+
 h1, p{
     font-family: 'VT323', monospace;
     text-align: center;
@@ -41,7 +71,7 @@ h1{
 
 .containerTexto{
     width: 100%;
-    height: 250px;
+    height: 300px;
     display: flex;
     justify-content:center;
 }
@@ -51,5 +81,141 @@ h1{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 10px
+    padding: 10px;
+    width: 600px;
+}
+
+#containerFormulario{  /*container formulário*/
+    display: flex;
+    justify-content: center;
+    /* background: #181920; */
+}
+/* inicio da formatação  do formulário*/
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fafafa;
+    margin: 50px;
+    background: #242632;
+    width: 400px;
+    height: 550px;
+    border: solid 3px #FCE93C;
+    border-radius: 20px;
+}
+
+h2{ 
+    text-align: start; 
+    margin: 10px;
+}
+
+fieldset{
+    margin: 20px;
+    border: none;
+    
+}
+
+span{
+    padding-left: 5px;
+    display: block;
+}
+
+label{
+    height: 20px;
+    padding: 3px;
+}
+
+.input{
+    width: 300px;
+    height: 23px;
+    border-radius: 5px;
+    text-indent: 2px;
+    padding: 2px;
+    background: #181920;
+    color: white;
+}
+
+.boxAssunto> label{
+    display: flex;
+    margin: 5px 5px 5px 0px;
+}
+
+#assunto{
+    margin-left: 5px;
+    color: white;
+    background: #242632;
+}
+
+#emailTexto{
+    height: 220px;
+    color: white;
+}
+
+textarea{
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid rgb(35, 35, 108);
+    color: #fafafa;
+    background: #181920;
+    max-width: 350px;
+    max-height: 200px;
+    min-height: 200px;
+    min-width: 300px;
+}
+
+#botao-enviar{
+    height: 30px;
+    border: solid 1px white;
+    box-shadow: #f3f2f4;
+    border-radius: 2px;
+    width: 50px;
+    align-self: center;
+    color: #fafafa;
+    background: #000; 
+}
+
+
+/* INTERAÇÕES COM O JAVASCRIPT */
+.container {
+    width: 400px; 
+    height: 250px;
+    background: gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.caixadetextoErro span {
+    color: #d21e14;
+}
+
+.entrada {
+    border-radius: 10px;
+    padding-left: 8px;
+    margin-top: 10px; 
+}
+
+#btnEnviar {
+    margin-top: 5px;
+}
+
+/* 
+Note que estas classes não existem no HTML,
+elas serão criadas de forma dinamica no JS ↓ 
+*/
+
+.caixadetextoErro .entrada {
+    border-color: #d21e14;
+}
+
+.caixadetextoAcerto span {
+    color: #4ae00a;
+}
+
+
+.caixadetextoAcerto .entrada {
+    border-color: #4ae00a;
 }

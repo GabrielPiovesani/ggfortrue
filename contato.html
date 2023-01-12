@@ -1,37 +1,18 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/contato.css">
-    <title>Contato</title>
-</head>
-<body>
-    <header>
-        <nav>
-
-            <a href="./index.html">Quem somos</a>
-            <a href="./produto.html">Produtos e Serviços</a>
-            <a href="./equipe.html">Nossa Equipe</a>
-            <a href="./contato.html">Entre em contato</a>
-        </nav>
-    </header>
-    
-</body>
-=======
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/contato.css">
+    <link rel="stylesheet" href="./assets/css/contato.css">
     <title>Contato</title>
 </head>
 <body>
     <header>
+        <div class="leg">
+            <p class="corparagrafo">Quack Games</p>
+        </div>  
+         <!--parte do menu do site  -->
         <nav class="menuBar">
             <ul>
                 <a href="./index.html">Quem somos</a>
@@ -52,9 +33,64 @@
         </div>
     </section>
     <section>
-        <form action="">
-            
-        </form>
+        <div id="containerFormulario">
+            <form name="form">
+                <fieldset>
+                        <h2>Entre em contato</h2>
+                    <div class="boxInput">
+                        <label>
+                            <span class="spansTitles">Nome:</span>
+                            <input type="text" name="nome" 
+                            placeholder="Nome e sobrenome" 
+                            class="input entrada required" id="nome"
+                            oninput="verificarNome()">
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="boxInput">
+                        <label>
+                            <span class="spansTitles">Email:</span>
+                            <input type="email" 
+                            name="email" 
+                            placeholder="Entre com o email" 
+                            class="input entrada required"
+                            id="email"
+                            oninput="verificarEmail()">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="boxAssunto">
+                        <label>
+                            <span>Assunto:</span>
+                            <select name="assunto" id="assunto">
+                                <option value="sujestaoDeMelhoria">Sugestão de melhoria</option>
+                                <option value="solicitaServico">Solicitação de serviço</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                            <span></span>   
+                        </label>
+                    </div>
+                    <div id="emailTexto">
+                        <label>
+                            <textarea name=""
+                            cols="40"
+                            rows="15" 
+                            placeholder="Escreva aqui..." id="textArea">
+                                
+                            </textarea>
+                        </label>
+                    </div>
+
+                    <input class="btn_submit" 
+                    type="submit"
+                    id="botao-enviar"
+                    value="Enviar"
+                    class="input"
+                    onclick="enviarForm()">
+                </fieldset>
+            </form>
+        </div>
     </section>
     <section class="containerTexto">
         <div class="texto">
@@ -64,7 +100,10 @@
             </p>
         </div>
     </section>
-    <script src="/assets/js/contato.js"></script>
+    <footer id="rodape">
+        Todos os direitos reservados ©
+        <img id="fotorodape" src="./assets/img/roda.JPG"> 
+    </footer>
+    <script src="./assets/js/contato.js"></script>
 </body>
->>>>>>> refs/remotes/origin/main
 </html>
