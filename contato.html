@@ -13,7 +13,7 @@
             <p class="corparagrafo">Quack Games</p>
         </div>  
          <!--parte do menu do site  -->
-        <nav class="menubar">
+        <nav class="menuBar">
             <ul>
                 <a href="./index.html">Quem somos</a>
                 <a href="./produto.html">Produtos e Serviços</a>
@@ -33,7 +33,7 @@
         </div>
     </section>
     <section>
-        <div id="containerFormulario"> 
+        <div id="containerFormulario">
             <form name="form">
                 <fieldset>
                         <h2>Entre em contato</h2>
@@ -43,8 +43,8 @@
                             <input type="text" name="nome" 
                             placeholder="Nome e sobrenome" 
                             class="input entrada required" id="nome"
-                            oninput="validaNome()">
-                            <small></small>
+                            oninput="verificarNome()">
+                            <span></span>
                         </label>
                     </div>
 
@@ -56,11 +56,10 @@
                             placeholder="Entre com o email" 
                             class="input entrada required"
                             id="email"
-                            oninput="validaEmail()">
-                            <small></small>
+                            oninput="verificarEmail()">
+                            <span></span>
                         </label>
                     </div>
-
                     <div class="boxAssunto">
                         <label>
                             <span>Assunto:</span>
@@ -72,7 +71,6 @@
                             <span></span>   
                         </label>
                     </div>
-
                     <div id="emailTexto">
                         <label>
                             <textarea name=""
@@ -84,16 +82,22 @@
                         </label>
                     </div>
 
-                    <div id="divButton">
-                        <input class="btn_submit" 
-                        type="submit"
-                        id="botao-enviar"
-                        value="Enviar"
-                        onclick="validarFormulario()">
-
-                    </div>
+                    <input class="btn_submit" 
+                    type="submit"
+                    id="botao-enviar"
+                    value="Enviar"
+                    class="input"
+                    onclick="enviarForm()">
                 </fieldset>
             </form>
+        </div>
+    </section>
+    <section class="containerTexto">
+        <div class="texto">
+            <h2></h2>
+            <p>
+
+            </p>
         </div>
     </section>
     <footer id="rodape">
