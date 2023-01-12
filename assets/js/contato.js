@@ -4,98 +4,72 @@ const regexEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i
  
 
 // Criando Função que verificar o campo nome do formulário 
-function verificarNome() {
+function validaNome() {
 
     const nomeValor = nome.value.trim()
 
     if (nomeValor === '') {
-        mensagemErro(nome, 'Ops, não pode ficar vazio!')
+        mensagemErro(nome, 'Nome não pode ficar vazio')
     }
     else if (nomeValor.length < 5) {
         mensagemErro(nome, 'Tamanho mínimo de 5 letras')
     }
 
     else {
-        mensagemAcerto(nome, 'Legal, está ok!')
+        mesgAcerto(nome, 'Legal, está ok!')
         return true
     }
 }
 
 
 // Verificando o campo email
-function verificarEmail() {
+function validaEmail() {
 
-    // Atribuindo o valor do campo email à variável emailValor
     const emailValor = email.value.trim()
 
-    // Usando um regex para validade se o email inserido está dentro do padrão
     if (regexEmail.test(emailValor)) {
-        mensagemAcerto(email, 'Ok, email válido!')
+        mesgAcerto(email, 'Email validado!')
         return true
     }
 
-    // Caso esteja preenchido o padrão respeitado: texto@texto.texto 
     else {
         mensagemErro(email, 'Ops, email inválido!')
     }
 }
 
-/* 
-Verificando se todos os campos foram preenchidos corretamente. 
-Note que as funçãos acima, quando recebem um valor aceitável de
-acordo com o teste, elas retornam 'true'. Desta forma, basta verificar
-se todos elas retornaram 'true', alguma não retornar, subentende-se
-que aquele campo não foi preenchido corretamente e o form não poderá
-ser enviado.
-*/
-function enviarForm() {
+// função que envia o formulário
+
+
+function mensagemErro(input, msg) {
+
+    const controle = input.parentElement
+    controle.className = 'spanErro'
+    const texto = controle.querySelector('small')
+    texto.innerHTML = msg
+
+}
+
+function mesgAcerto(input, msg) {
+    const controle = input.parentElement
+    controle.className = 'spanAcerto'
+
+    const texto = controle.querySelector('small')
+    texto.innerHTML = msg
+}
+
+
+
+function validarFormulario() {
     
     // Verificar se todas as funções retornaram 'true'
-    if (verificarNome() && verificarEmail()){
-        alert('Formulário enviado com sucesso!')
+    if (validaNome() && validaEmail()){
+        alert('Formulário enviado!')
+        return true
     }
     else {
         alert('Ops, parece que um ou mais campos não foram preenchidos corretamnte!')
     }
 }
-
-
-
-/* 
-Função que será executada sempre que existir um erro no formulário
-de acordo com as validações acima... Estas funções recebem, o nome do
-campo e a mensagem que será apresentada de forma dinamica dentro 
-da tag span.
-*/
-function mensagemErro(entrada, msg) {
-
-    /* Criando uma variável que receberá acesso ao pai do elemento informado.
-        Exemplo, se passado o elemento com id='nome', ela irá ganhar acesso
-        ele elemento pai dele no HTML, ou seja, se ele estiver dentro de uma 
-        div chamada 'leo', a variável controle agora teria acesso sobre a 
-        div leo.
-    */
-    const controle = entrada.parentElement
-
-    // Agora estamos alterando o nome da div (pai do elemento) para uma nova
-    controle.className = 'caixadetextoErro'
-
-    // Aqui estamos acessando a tag span de dentro da classe 'caixadetextoErro'
-    const texto = controle.querySelector('span')
-
-    // Pós acessar a tag span, estamos escrevendo dentro dela 
-    texto.innerHTML = msg
-
-}
-
-function mensagemAcerto(entrada, msg) {
-    const controle = entrada.parentElement
-    controle.className = 'caixadetextoAcerto'
-
-    const texto = controle.querySelector('span')
-    texto.innerHTML = msg
-}
-
 
 
 
