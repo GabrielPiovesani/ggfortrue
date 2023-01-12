@@ -124,6 +124,45 @@ footer {
     align-items: center;
 
 }
+.botaoCurt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    
+
+}
+input {
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    color: #FCe930;
+    background-color: black;
+
+    
+    
+  }
+  input:disabled {
+    background-color: black;
+
+  }
+  button {
+    font-family: 'VT323', monospace;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color:  #FCe930;
+    font-size: 30px;
+    cursor: pointer;
+    
+  }
+  
+
+
+
+
 @media (max-width: 600px){ 
 
 
@@ -135,11 +174,12 @@ footer {
         }
 
         h1{
+            margin-top: 40px;
             font-size: 40px;
         }
         .textDiscr{
             font-size: 15px;
-            width: 30%;
+            width: 80%;
         }
         .leg{
             font-size: 50px;

@@ -4,18 +4,18 @@ const regexEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i
  
 
 // Criando Função que verificar o campo nome do formulário 
-function validaNome() {
+function validaNome() {// função valida nome
 
     const nomeValor = nome.value.trim()
 
-    if (nomeValor === '') {
-        mensagemErro(nome, 'Nome não pode ficar vazio')
+    if (nomeValor === '') { //verifica se o nome está vazio
+        mensagemErro(nome, 'Nome não pode ficar vazio') 
     }
-    else if (nomeValor.length < 5) {
+    else if (nomeValor.length < 5) { // verifica se há menos que 5 caracteres
         mensagemErro(nome, 'Tamanho mínimo de 5 letras')
     }
 
-    else {
+    else { // executa caso as duas condições sejam falsas
         mesgAcerto(nome, 'Legal, está ok!')
         return true
     }
@@ -23,13 +23,13 @@ function validaNome() {
 
 
 // Verificando o campo email
-function validaEmail() {
+function validaEmail() { // função valida e-mail
 
     const emailValor = email.value.trim()
 
-    if (regexEmail.test(emailValor)) {
+    if (regexEmail.test(emailValor)) { //compara as regras(expressões) do email regex com a entrada do input
         mesgAcerto(email, 'Email validado!')
-        return true
+        return true 
     }
 
     else {
@@ -40,12 +40,12 @@ function validaEmail() {
 // função que envia o formulário
 
 
-function mensagemErro(input, msg) {
+function mensagemErro(input, msg) { // função de mensagem de erro
 
-    const controle = input.parentElement
-    controle.className = 'spanErro'
-    const texto = controle.querySelector('small')
-    texto.innerHTML = msg
+    const controle = input.parentElement  // pega a div pai do input e atribui a uma variável
+    controle.className = 'spanErro' // atribui uma classe a variável
+    const texto = controle.querySelector('small') //  pega a tag small dentro da div pai do input, ou seja, de dentro da label e adiciona a váriavel texto 
+    texto.innerHTML = msg // adiciono texto msg para ser declarada na função ao chama-la
 
 }
 
@@ -62,12 +62,12 @@ function mesgAcerto(input, msg) {
 function validarFormulario() {
     
     // Verificar se todas as funções retornaram 'true'
-    if (validaNome() && validaEmail()){
+    if (validaNome() && validaEmail()){ 
         alert('Formulário enviado!')
         return true
-    }
+    } 
     else {
-        alert('Ops, parece que um ou mais campos não foram preenchidos corretamnte!')
+        alert('Por Favor, preencha os dados corretamente')
     }
 }
 

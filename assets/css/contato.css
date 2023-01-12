@@ -10,8 +10,11 @@
 body{
     background: #f3f2f4;
     font-family: 'VT323', monospace;
+    width: 100%;
+    height: 100%;
 }
 /* inicio da formatação do menu  */
+/* parte  do menu do site */
 .corparagrafo {
     /* deixa o corpo do elemento trasnparente para permitir sua coloração, de fundo criada apareça dentro do item- CONFIRMAR SE ESTE É O CONSEITO COM A CARLA */
     -webkit-background-clip: text;
@@ -21,6 +24,7 @@ body{
     -webkit-text-fill-color: transparent;
     /* alinhamento dentro do display */
     text-align: center;
+    font-size: 75px;
 }
 .leg{
     /* preenchimento fundo do display */
@@ -28,9 +32,8 @@ body{
     /* fonte */
     font-family: 'VT323', monospace;
     /* tamanho fonte */
-    font-size: 75px;
-}
-/*------------------------------menu bar------------------------------------------------------------------------------------------- */
+    
+} 
 .menubar ul{
     /* escolha de utilização de display: flex com o intuito de manipularmos os elementos filhos */
         display: flex;
@@ -39,10 +42,9 @@ body{
     /* preenchimento do display */
         background-color: black;
     /* definindo espaço fixo entre o nome abaixo do banner e o corpo */
-        margin-top: 5px;
-        margin-bottom: 1px;
-        padding: 0px 5px 0px 5px;
-    }
+    margin-top: 5px;
+
+}
     nav a{
     /* fonte menu */
         font-family: 'VT323', monospace;
@@ -253,7 +255,7 @@ footer {
         .texto > p{
             font-size: 15px;
         }
-        .leg{
+        .corparagrafo{
             font-size: 50px;
         }
 
