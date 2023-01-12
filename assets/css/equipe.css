@@ -81,7 +81,8 @@ h1{
     font-family: 'VT323', monospace;
     /* tamanho */
     font-size:70px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+}
     
 .container {
     margin-top: 100px;
